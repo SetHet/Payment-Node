@@ -1,0 +1,25 @@
+{
+  "name": "payment_nodeserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SetHet/Payment-Node.git"
+  },
+  "author": "Sebastian Groselj",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/SetHet/Payment-Node/issues"
+  },
+  "homepage": "https://github.com/SetHet/Payment-Node#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
