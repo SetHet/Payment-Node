@@ -1,7 +1,7 @@
 import Express from "express";
 import {config} from "./config/index.js";
-import { PayCreate, PaymentDetail } from "./services/paypal.js";
-import {} from "./services/mercadopago.js";
+import _paypal from "./services/paypal.js";
+import _mercadopago from "./services/mercadopago.js";
 
 const app = Express()
 app.use(Express.json())
@@ -23,13 +23,15 @@ app.get("/", (req, res) => {
 app.get("/pay", async (req, res) => {
     const body = req.body;
 
-    const paypal = await PayCreate();
+    //const paypal = await _paypal.PayCreate();
+    //const mercadopago = await _mercadopago.PayCreate();
 
 
     res.status(200).json({
         mensaje: "Sistema de pago",
         body: body,
         paypal: paypal,
+        mercadopago: mercadopago,
     })
 })
 

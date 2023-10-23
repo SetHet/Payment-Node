@@ -12,4 +12,8 @@ export const config = {
     token: process.env.PAYPAL_TOKEN,
     appid: process.env.PAYPAL_APPID,
   },
+  mercadopago: {
+    accessToken: process.env.MERCADOPAGO_TOKEN,
+    publickey: process.env.MERCADOPAGO_PUBLICKEY
+  },
 };

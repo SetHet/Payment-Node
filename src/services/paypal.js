@@ -2,6 +2,10 @@
 import {config} from "./../config/index.js"
 import fetch from "node-fetch"
 
+export default {
+  PayCreate, PaymentDetail
+}
+
 export async function PayPalScriptTest() {
     let rta;
     try {
