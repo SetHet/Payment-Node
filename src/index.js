@@ -24,15 +24,16 @@ app.get("/pay", async (req, res) => {
     const body = req.body;
 
     //const paypal = await _paypal.PayCreate();
-    //const mercadopago = await _mercadopago.PayCreate();
+    const mercadopago = await _mercadopago.PayCreate();
 
+    const rta = {
+      mensaje: "Sistema de pago",
+      body: body,
+      //paypal: paypal || 0,
+      mercadopago: mercadopago ?? 0,
+    };
 
-    res.status(200).json({
-        mensaje: "Sistema de pago",
-        body: body,
-        paypal: paypal,
-        mercadopago: mercadopago,
-    })
+    res.status(200).json(rta)
 })
 
 app.get("/payment/detail", async (req, res) => {
